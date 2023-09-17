@@ -1,11 +1,10 @@
 <?php
 
-class Theplugmag_Post_Listing extends \Elementor\Widget_base
-{
+class TP_Cinema extends \Elementor\Widget_base {
 
     public function get_name()
     {
-        return 'theplugmag_post_listing';
+        return 'tp_cinema';
     }
 
     public function get_categories() {
@@ -14,8 +13,12 @@ class Theplugmag_Post_Listing extends \Elementor\Widget_base
 
     public function get_title()
     {
-        return 'Theplugmag Post Listing';
+        return 'TP Cinema';
     }
+
+    public function get_icon() {
+        return 'eicon-video-camera'; 
+    } 
 
     protected function _register_controls()
     {
@@ -24,6 +27,6 @@ class Theplugmag_Post_Listing extends \Elementor\Widget_base
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Post Listing</div>';
+        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Video Player (Cinema)</div>';
     }
 }

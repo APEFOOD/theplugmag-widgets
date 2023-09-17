@@ -1,3 +1,3 @@
-<div class="bg-black text-white text-center">
+<div class="bg-red-700 text-white text-center">
     HEADER WIDGET
 </div> 

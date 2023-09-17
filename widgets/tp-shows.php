@@ -1,11 +1,11 @@
 <?php
 
-class Theplugmag_Shows extends \Elementor\Widget_base
+class TP_Shows extends \Elementor\Widget_base
 {
 
     public function get_name()
     {
-        return 'theplugmag_Shows';
+        return 'tp_Shows';
     }
 
     public function get_categories() {
@@ -14,8 +14,12 @@ class Theplugmag_Shows extends \Elementor\Widget_base
 
     public function get_title()
     {
-        return 'Theplugmag Shows';
+        return 'TP Shows';
     }
+
+    public function get_icon() {
+        return 'eicon-tv'; 
+    } 
 
     protected function _register_controls()
     {

@@ -1,10 +1,11 @@
 <?php
 
-class Theplugmag_Header extends \Elementor\Widget_base {
+class TP_Top_Stories extends \Elementor\Widget_base
+{
 
     public function get_name()
     {
-        return 'theplugmag_header';
+        return 'tp_top_stories';
     }
 
     public function get_categories() {
@@ -13,8 +14,12 @@ class Theplugmag_Header extends \Elementor\Widget_base {
 
     public function get_title()
     {
-        return 'Theplugmag Header';
+        return 'TP Top Stories';
     }
+
+    public function get_icon() {
+        return 'eicon-parallax'; 
+    } 
 
     protected function _register_controls()
     {
@@ -23,6 +28,6 @@ class Theplugmag_Header extends \Elementor\Widget_base {
 
     protected function render()
     {
-        require_once("templates/header.php"); 
+        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Top Stories</div>';
     }
 }

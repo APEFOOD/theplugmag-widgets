@@ -1,10 +1,10 @@
 <?php
 
-class Theplugmag_Featured_Videos extends \Elementor\Widget_base {
+class TP_Featured_Videos extends \Elementor\Widget_base {
 
     public function get_name()
     {
-        return 'theplugmag_featured_videos';
+        return 'tp_featured_videos';
     }
 
     public function get_categories() {
@@ -13,8 +13,12 @@ class Theplugmag_Featured_Videos extends \Elementor\Widget_base {
 
     public function get_title()
     {
-        return 'Theplugmag Featured Videos';
+        return 'TP Featured Videos';
     }
+
+    public function get_icon() {
+        return 'eicon-video-playlist'; 
+    } 
 
     protected function _register_controls()
     {

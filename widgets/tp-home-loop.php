@@ -1,10 +1,10 @@
 <?php
 
-class Theplugmag_Footer extends \Elementor\Widget_base {
+class TP_Home_Loop extends \Elementor\Widget_base {
 
     public function get_name()
     {
-        return 'theplugmag_footer';
+        return 'tp_home_loop';
     }
 
     public function get_categories() {
@@ -13,8 +13,12 @@ class Theplugmag_Footer extends \Elementor\Widget_base {
 
     public function get_title()
     {
-        return 'Theplugmag Footer';
+        return 'TP Home Loop';
     }
+
+    public function get_icon() {
+        return 'eicon-loop-builder'; 
+    } 
 
     protected function _register_controls()
     {
@@ -23,6 +27,6 @@ class Theplugmag_Footer extends \Elementor\Widget_base {
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Footer</div>';
+        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Home Loop</div>';
     }
 }

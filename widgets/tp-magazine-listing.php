@@ -1,10 +1,10 @@
 <?php
 
-class Theplugmag_Magazine_Listing extends \Elementor\Widget_base {
+class TP_Magazine_Listing extends \Elementor\Widget_base {
 
     public function get_name()
     {
-        return 'theplugmag_magazine_listing';
+        return 'tp_magazine_listing';
     }
 
     public function get_categories() {
@@ -13,8 +13,12 @@ class Theplugmag_Magazine_Listing extends \Elementor\Widget_base {
 
     public function get_title()
     {
-        return 'Theplugmag Magazine Listing';
+        return 'TP Magazine Listing';
     }
+
+    public function get_icon() {
+        return 'eicon-posts-grid'; 
+    } 
 
     protected function _register_controls()
     {

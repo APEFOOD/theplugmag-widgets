@@ -36,4 +36,3 @@ function theplugmag_enqueue_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'theplugmag_enqueue_scripts');
-

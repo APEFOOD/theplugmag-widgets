@@ -1,11 +1,10 @@
 <?php
 
-class Theplugmag_Features_Slider extends \Elementor\Widget_base
-{
+class TP_Footer extends \Elementor\Widget_base {
 
     public function get_name()
     {
-        return 'theplugmag_features_slider';
+        return 'tp_footer';
     }
 
     public function get_categories() {
@@ -14,8 +13,12 @@ class Theplugmag_Features_Slider extends \Elementor\Widget_base
 
     public function get_title()
     {
-        return 'Theplugmag Features Slider';
+        return 'TP Footer';
     }
+
+    public function get_icon() {
+        return 'eicon-footer'; 
+    } 
 
     protected function _register_controls()
     {
@@ -24,6 +27,6 @@ class Theplugmag_Features_Slider extends \Elementor\Widget_base
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Features Slider</div>';
+        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Footer</div>';
     }
 }
