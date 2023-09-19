@@ -2,7 +2,12 @@
 
 /**
  * Plugin Name: The Plug Mag Widgets 
+ * Plugin URI: https://github.com/APEFOOD/
  * Description: Custom Elementor Widgets 
+ * Version 1.0.1
+ * Author: devbykabelo
+ * Author URI: https://devbykabelo.com
+ * GitHub Plugin URI: https://github.com/APEFOOD/theplugmag-widgets
  */
 
 // Include widget classes  
