@@ -38,6 +38,9 @@ function theplugmag_enqueue_scripts() {
         }
     }
 
+    // manual JS enqueue 
+    wp_enqueue_script('theplugmag-scripts', plugin_dir_url(__FILE__) . 'assets/main.js', array(), null, true);
+
 }
 
 add_action('wp_enqueue_scripts', 'theplugmag_enqueue_scripts');
