@@ -52,7 +52,7 @@
 
 <div id="tpMobileMenu" class="fixed top-0 left-0 w-64 h-full bg-white transform -translate-x-full overflow-y-auto z-50">
     <!-- close button -->
-    <div class="flex justify-between items-center px-4 py-4">
+    <div class="flex justify-between items-center p-4">
         <span></span>
         <button id="tpCloseMenu" class="p-4 bg-transparent border-none">X</button>
     </div>
