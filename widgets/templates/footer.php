@@ -1,4 +1,4 @@
-<footer class="bg-black text-white p-4">
+<footer class="bg-black text-white p-4 mt-4">
     <!-- Top border line -->
     <div class="border-t-[1.5px] mx-0 border-white w-full"></div>
     
