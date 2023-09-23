@@ -27,6 +27,6 @@ class TP_Footer extends \Elementor\Widget_base {
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Footer</div>';
+        require_once("templates/footer.php"); 
     }
 }

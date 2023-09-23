@@ -8,14 +8,14 @@
         </div>
     </div>
 
-    <div class="tp-bottom-header flex bg-white py-2 w-full my-1 shadow-sm">
+    <div class="tp-bottom-header flex bg-white py-2 w-full shadow border-b">
         <!-- secondary logo (initially hidden) -->
         <div class="pl-8 py-2 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
             <img class="w-32" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Standard.png';?>" alt="Secondary Logo">
         </div>
 
         <!-- navigation menu --> 
-        <nav class="tp-main-menu w-3/5 flex justify-center items-center space-x-6">
+        <nav class="tp-main-menu w-3/5 flex justify-center items-center space-x-2">
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Home</a>
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Music</a>
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Style</a>
