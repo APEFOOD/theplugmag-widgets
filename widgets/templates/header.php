@@ -11,11 +11,11 @@
     <div class="tp-bottom-header flex bg-white py-2 w-full my-1 shadow-sm">
         <!-- secondary logo (initially hidden) -->
         <div class="pl-8 py-2 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
-            <img class="w-28" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Minimal.png';?>" alt="Secondary Logo">
+            <img class="w-32" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Standard.png';?>" alt="Secondary Logo">
         </div>
 
         <!-- navigation menu --> 
-        <nav class="main-menu w-3/5 flex justify-center items-center space-x-6">
+        <nav class="tp-main-menu w-3/5 flex justify-center items-center space-x-6">
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Home</a>
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Music</a>
             <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Style</a>
@@ -73,15 +73,15 @@
 </div>
 
 <!-- fullscreen search overlay --> 
-<div id="tp-fullscreen-search" class="opacity-0 pointer-events-none fixed inset-0 bg-gray-400 bg-opacity-90 flex items-center justify-center h-screen transition-opacity duration-300 z-max">
+<div id="tp-fullscreen-search" class="opacity-0 pointer-events-none fixed inset-0 bg-gray-700 bg-opacity-90 flex items-center justify-center h-screen transition-opacity duration-300 z-max">
     <div class="relative flex items-center justify-center w-full max-w-xs">
         <form role="search" method="get" class="tp-search-form" action="<?php echo home_url( '/' ); ?>">
             <label>
                 <span class="screen-reader-text"><?php _x( 'Search for:', 'label' ) ?></span>
-                <input type="search" class="tp-search-field w-full py-4 px-6 text-2xl text-center tp-minimalist-search"
+                <input type="search" id="tp-search-input" class="tp-search-field w-full py-4 px-6 text-2xl text-center caret-black tp-minimalist-search"
                     placeholder="type and hit enter..."
                     value="<?php echo get_search_query() ?>" name="s"
-                    title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+                    title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" autofocus />
             </label>            
         </form>
     </div>

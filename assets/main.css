@@ -17,7 +17,7 @@
 .tp-minimalist-search {
     background-color: transparent !important;
     border: none !important;
-    border-bottom: 2px solid black !important;
+    border-bottom: 1px solid black !important;
     outline: none !important;
     padding: 5px 0 !important;
     width: 300px !important;
