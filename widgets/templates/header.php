@@ -10,7 +10,7 @@
 
     <div class="tp-bottom-header flex bg-white py-2 w-full my-1 shadow-sm">
         <!-- secondary logo (initially hidden) -->
-        <div class="pl-8 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
+        <div class="pl-8 py-2 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
             <img class="w-28" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Minimal.png';?>" alt="Secondary Logo">
         </div>
 
@@ -53,7 +53,7 @@
 <!-- drawer overlay --> 
 <div id="tpMenuOverlay" class="fixed inset-0 bg-black opacity-50 z-10 hidden"></div>
 
-<div id="tpMobileMenu" class="fixed top-0 left-0 w-64 h-full bg-white transform -translate-x-full overflow-y-auto z-50">
+<div id="tpMobileMenu" class="fixed top-0 left-0 w-64 h-full bg-gray-50 transform -translate-x-full overflow-y-auto z-50">
     <!-- close button -->
     <div class="flex justify-between items-center p-4">
         <span></span>

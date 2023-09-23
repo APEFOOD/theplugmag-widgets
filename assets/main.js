@@ -35,10 +35,7 @@ jQuery(document).ready(function($) {
     const searchOverlay = document.getElementById('tp-fullscreen-search');
 
     closeMenu.addEventListener("click", () => {
-        console.log("clicked");
-        console.log(searchOverlay);
-        //searchOverlay.style.opacity = '0';
-        //searchOverlay.style.pointerEvents = 'none';
+        menuDrawerOverlay.classList.add('hidden');
         mobileMenu.style.transform = "translateX(-100%)";
 
     });
@@ -59,7 +56,6 @@ jQuery(document).ready(function($) {
     }, true); */
 
     document.getElementById('tp-fullscreen-search').addEventListener('click', function(event) {
-        console.log("clicked");
         if (event.target === this || event.target.id === 'tp-close-search') {
             this.classList.add('opacity-0', 'pointer-events-none');
         }
