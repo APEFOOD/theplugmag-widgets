@@ -1,14 +1,14 @@
 <!-- desktop header --> 
 <div class="hidden lg:block w-full">
     
-    <div class="tp-main-logo relative py-4">
+    <div class="tp-main-logo relative py-4 bg-gray-100">
         <div class="tp-site-logo flex justify-center">
             <!-- main site logo --> 
             <img class="w-1/3" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Minimal.png';?>" alt="Site Logo">
         </div>
     </div>
 
-    <div class="tp-bottom-header flex bg-white py-2 w-full">
+    <div class="tp-bottom-header flex bg-white py-2 w-full my-1 shadow-sm">
         <!-- secondary logo (initially hidden) -->
         <div class="pl-8 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
             <img class="w-28" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Minimal.png';?>" alt="Secondary Logo">
@@ -16,13 +16,13 @@
 
         <!-- navigation menu --> 
         <nav class="main-menu w-3/5 flex justify-center items-center space-x-6">
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Home</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Music</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Style</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Culture</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Latest</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Magazine</a>
-            <a href="#" class="uppercase text-gray-700 hover:text-black">Plug tv</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Home</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Music</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Style</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Culture</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Latest</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Magazine</a>
+            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Plug tv</a>
         </nav>
 
         <!-- Dark mode toggle and search button --> 
@@ -46,9 +46,12 @@
         <!-- dark mode toggle --> 
         <button class="eicon-adjust bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
         <!-- search button --> 
-        <button class="eicon-search bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
+        <button class="tp-search-toggle eicon-search bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
     </div>
 </div>
+
+<!-- drawer overlay --> 
+<div id="tpMenuOverlay" class="fixed inset-0 bg-black opacity-50 z-10 hidden"></div>
 
 <div id="tpMobileMenu" class="fixed top-0 left-0 w-64 h-full bg-white transform -translate-x-full overflow-y-auto z-50">
     <!-- close button -->
@@ -58,14 +61,30 @@
     </div>
     
     <!-- navigation links -->
-    <nav class="flex flex-col space-y-4 p-4">
-        <a href="#">HOME</a>
-        <a href="#">MUSIC</a>
-        <a href="#">STYLE</a>
-        <a href="#">CULTURE</a>
-        <a href="#">LATEST</a>
-        <a href="#">MAGAZINE</a>
-        <a href="#">PLUG TV</a>
+    <nav class="flex flex-col space-y-4 p-4 text-center">
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">HOME</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">MUSIC</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">STYLE</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">CULTURE</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">LATEST</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">MAGAZINE</a>
+        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">PLUG TV</a>
     </nav>
+</div>
+
+<!-- fullscreen search overlay --> 
+<div id="tp-fullscreen-search" class="opacity-0 pointer-events-none fixed inset-0 bg-gray-400 bg-opacity-90 flex items-center justify-center h-screen transition-opacity duration-300 z-max">
+    <div class="relative flex items-center justify-center w-full max-w-xs">
+        <form role="search" method="get" class="tp-search-form" action="<?php echo home_url( '/' ); ?>">
+            <label>
+                <span class="screen-reader-text"><?php _x( 'Search for:', 'label' ) ?></span>
+                <input type="search" class="tp-search-field w-full py-4 px-6 text-2xl text-center tp-minimalist-search"
+                    placeholder="type and hit enter..."
+                    value="<?php echo get_search_query() ?>" name="s"
+                    title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+            </label>            
+        </form>
+    </div>
+    <button id="tp-close-search" class="absolute top-0 right-0 mt-4 mr-4 text-2xl bg-transparent border-0">×</button>
 </div>
 

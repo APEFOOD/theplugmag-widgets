@@ -2,10 +2,35 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+* {
+    margin-left: 0;
+}
+
 .z-max {
     z-index: 100000;
 }
 
 #tpMobileMenu {
     transition: transform 0.3s ease-in-out;
+}
+
+.tp-minimalist-search {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    outline: none !important;
+    padding: 5px 0 !important;
+    width: 300px !important;
+    box-shadow: none !important;
+}
+
+.tp-minimalist-search::placeholder {
+    color: #888 !important;
+    opacity: 1 !important;
+    font-size: 24px;
+}
+
+.tp-minimalist-search:focus {
+    border-color: #333 !important;
+    box-shadow: none !important;
 }
