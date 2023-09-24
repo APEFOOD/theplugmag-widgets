@@ -34,3 +34,52 @@
     border-color: #333 !important;
     box-shadow: none !important;
 }
+
+.tp-top-stories {
+    height: 100vh;
+   /* position: relative; */
+}
+
+@media (min-width: 1024px) { /* This is a common desktop breakpoint, similar to Tailwind's lg: */
+    .tp-stories-grid {
+        height: calc(100vh);
+        overflow-y: scroll;
+        position: sticky;
+        top: 0;
+    }
+}
+
+/*
+.tp-featured-story {
+    position: relative;
+}
+
+.tp-story-text {
+    position: absolute;
+    bottom: 10px;   
+    left: 10px;     
+}*/
+
+
+/*.tp-featured-story img,
+.tp-story img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.tp-story-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+}*/
+
+/* Hiding the scrollbar */
+#storiesGrid::-webkit-scrollbar {
+    display: none;
+}
+
+#storiesGrid {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

@@ -58,4 +58,40 @@ jQuery(document).ready(function($) {
         }
     });
 
+    // top stories parallax effect (only run the rest of the script for desktop view)
+    if(window.innerWidth <= 1024) return;
+
+    const topStoriesContainer = document.querySelector('.tp-top-stories');
+    const storiesGrid = document.querySelector('#storiesGrid');
+    let isGridInView = false;
+
+    // Observer to detect when the stories grid is in view
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            isGridInView = entry.isIntersecting;
+        });
+    });
+
+    // Observe the stories grid
+    observer.observe(storiesGrid);
+
+    topStoriesContainer.addEventListener('wheel', function(event) {
+        // Only apply custom scroll if the stories grid is in view
+        if (isGridInView) {
+            if ((event.deltaY < 0 && storiesGrid.scrollTop === 0) ||
+                (event.deltaY > 0 && storiesGrid.scrollHeight - storiesGrid.scrollTop === storiesGrid.clientHeight)) {
+                // At top and trying to scroll up, or at bottom and trying to scroll down: do nothing (this allows normal scrolling)
+                return;
+            }
+            
+            event.preventDefault();
+            storiesGrid.scrollTop += event.deltaY;
+        }
+    });
+    
+    
+    
+    
+    
+
 }); 
