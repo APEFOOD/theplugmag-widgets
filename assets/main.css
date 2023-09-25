@@ -2,10 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-* {
-    margin-left: 0;
-}
-
 .z-max {
     z-index: 100000;
 }
@@ -39,6 +35,11 @@
     height: 100vh;
    /* position: relative; */
 }
+
+/*.tp-top-stories img {
+    width: auto;
+    height: auto;
+}*/
 
 @media (min-width: 1024px) { /* This is a common desktop breakpoint, similar to Tailwind's lg: */
     .tp-stories-grid {
