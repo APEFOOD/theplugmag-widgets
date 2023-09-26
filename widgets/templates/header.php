@@ -33,7 +33,7 @@
 </div>
 
 <!-- mobile header --> 
-<div class="bg-white py-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50 lg:hidden">
+<div class="bg-white py-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50 lg:hidden max-lg:mb-[115px]">
     <!-- hamburger icon (from our good friends at Elementor) -->
     <button class="eicon-menu-bar px-3 text-black bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"></button>
 
