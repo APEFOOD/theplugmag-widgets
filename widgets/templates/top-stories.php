@@ -12,46 +12,112 @@
         </div>
     </div>
     
+    <!-- stories grid --> 
+    <div class="tp-stories-grid flex flex-wrap w-full px-4 md:mx-2 lg:w-1/2 lg:overflow-y-scroll" id="storiesGrid">
+
+        <!-- left column --> 
+        <div class="w-full md:flex-1">
+            <div class="tp-story mx-1 flex flex-col md:block my-1 md:my-0 max-md:border-b max-md:border-black">
+                <div class="flex md:block">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="w-[103px] !h-[103px] md:!w-4/5 md:!h-auto md:mx-auto object-cover" alt="Story">
+                    <div class="flex-1 md:w-4/5 max-md:p-4 md:mx-auto">
+                        <p class="pb-2">tag</p>
+                        <h3 class="tp-story-title mt-2">Very Verbose Story Title 1</h3>
+                        <p class="">byline</p>
+                        <p>date</p>
+                    </div>   
+                </div>
+            </div>
+            
+            <div class="tp-story mx-1 flex flex-col md:block my-1 md:my-0 max-md:border-b max-md:border-black">
+                <div class="flex md:block">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="w-[103px] !h-[103px] md:!w-4/5 md:!h-[320px] md:mx-auto object-cover" alt="Story">
+                    <div class="flex-1 md:w-4/5 max-md:p-4 md:mx-auto">
+                        <p class="pb-2">tag</p>
+                        <h3 class="tp-story-title mt-2">Very Verbose Story Title 3</h3>
+                        <p class="">byline</p>
+                        <p>date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- right column --> 
+        <div class="w-full md:flex-1">
+            <div class="tp-story mx-1 flex flex-col md:block my-1 md:my-0 max-md:border-b max-md:border-black">
+                <div class="flex md:block">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="w-[103px] !h-[103px] md:!w-4/5 md:!h-[320px] md:mx-auto object-cover" alt="Story">
+                    <div class="flex-1 md:w-4/5 max-md:p-4 md:mx-auto">
+                        <p class="pb-2">tag</p>
+                        <h3 class="tp-story-title mt-2">Very Verbose Story Title 2</h3>
+                        <p class="">byline</p>
+                        <p>date</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tp-story mx-1 flex flex-col md:block my-1 md:my-0 max-md:border-b max-md:border-black">
+                <div class="flex md:block">
+                    <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="w-[103px] !h-[103px] md:!w-4/5 md:!h-auto md:mx-auto object-cover" alt="Story">
+                    <div class="flex-1 md:w-4/5 max-md:p-4 md:mx-auto">
+                        <p class="pb-2">tag</p>
+                        <h3 class="tp-story-title mt-2">Very Verbose Story Title 4</h3>
+                        <p class="">byline</p>
+                        <p>date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    <div class="tp-stories-grid flex w-full px-4 md:mx-2 lg:w-1/2 lg:overflow-y-scroll" id="storiesGrid">
+
+    <?php /*<div class="tp-stories-grid flex w-full px-4 md:mx-2 lg:w-1/2 lg:overflow-y-scroll" id="storiesGrid">
         
         <!-- left column --> 
         <div class="flex-1">
             <div class="tp-story mx-1">
-                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full !h-[213px] object-cover" alt="Story">
-                <p class="pb-2">tag</p>
-                <h3 class="tp-story-title mt-2">Very Verbose <br />Story Title 1</h3>
-                <p class="">byline</p>
-                <p>date</p>
+                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="w-full md:!w-4/5 md:!h-auto md:mx-auto object-cover" alt="Story">
+                <div class="md:w-4/5 md:mx-auto">
+                    <p class="pb-2">tag</p>
+                    <h3 class="tp-story-title mt-2">Very Verbose Story Title 1</h3>
+                    <p class="">byline</p>
+                    <p>date</p>
+                </div>   
             </div>
             <div class="tp-story mx-1">
-                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full !h-[320px] object-cover" alt="Story">
-                <p class="pb-2">tag</p>
-                <h3 class="tp-story-title mt-2">Very Verbose <br />Story Title 3</h3>
-                <p class="">byline</p>
-                <p>date</p>
+                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full md:!w-4/5 md:!h-[320px] md:mx-auto object-cover" alt="Story">
+                <div class="md:w-4/5 md:mx-auto">
+                    <p class="pb-2">tag</p>
+                    <h3 class="tp-story-title mt-2">Very Verbose Story Title 3</h3>
+                    <p class="">byline</p>
+                    <p>date</p>
+                </div>
             </div>
         </div>
 
         <!-- right column --> 
         <div class="flex-1">
             <div class="tp-story mx-1">
-                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full !h-[320px] object-cover" alt="Story">
-                <p class="pb-2">tag</p>
-                <h3 class="tp-story-title mt-2">Very Verbose <br />Story Title 2</h3>
-                <p class="">byline</p>
-                <p>date</p>
+                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full md:!w-4/5 md:!h-[320px] md:mx-auto object-cover" alt="Story">
+                <div class="md:w-4/5 md:mx-auto">
+                    <p class="pb-2">tag</p>
+                    <h3 class="tp-story-title mt-2">Very Verbose Story Title 2</h3>
+                    <p class="">byline</p>
+                    <p>date</p>
+                </div>
             </div>
             <div class="tp-story mx-1">
-                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full !h-[213px] object-cover" alt="Story">
-                <p class="pb-2">tag</p>
-                <h3 class="tp-story-title mt-2">Very Verbose <br />Story Title 4</h3>
-                <p class="">byline</p>
-                <p>date</p>
+                <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/red.png';?>" class="!w-full md:!w-4/5 md:!h-auto md:mx-auto object-cover" alt="Story">
+                <div class="md:w-4/5 md:mx-auto">
+                    <p class="pb-2">tag</p>
+                    <h3 class="tp-story-title mt-2">Very Verbose Story Title 4</h3>
+                    <p class="">byline</p>
+                    <p>date</p>
+                </div>
             </div>
         </div>
 
-    </div>
+    </div>*/?>
 
 </div>

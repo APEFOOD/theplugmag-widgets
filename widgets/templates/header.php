@@ -27,8 +27,7 @@
 
         <!-- Dark mode toggle and search button --> 
         <div class="pr-8 w-1/5 flex justify-end items-center">
-            <button class="tp-dark-mode-toggle bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"><i class="eicon-adjust shadow text-black"></i></button>
-            <button class="tp-search-toggle bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"><i class="eicon-search shadow text-black"></i></button>
+            <button class="tp-search-toggle bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0 mr-6"><i class="eicon-search shadow text-black"></i></button>
         </div>
     </div>
 </div>
@@ -43,8 +42,6 @@
 
     <!-- toggles --> 
     <div class="flex">
-        <!-- dark mode toggle --> 
-        <button class="eicon-adjust bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
         <!-- search button --> 
         <button class="tp-search-toggle eicon-search bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
     </div>
