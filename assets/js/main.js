@@ -1,4 +1,9 @@
+import { toggleVideo } from "./cinema";
+
 jQuery(document).ready(function($) {
+
+    // Cinema 
+    document.querySelector('.video-thumbnail').addEventListener('click', toggleVideo);
 
     // navbar scroll effect 
     const mainLogo = document.querySelector('.tp-main-logo');
@@ -88,10 +93,6 @@ jQuery(document).ready(function($) {
             storiesGrid.scrollTop += event.deltaY;
         }
     });
-    
-    
-    
-    
     
 
 }); 

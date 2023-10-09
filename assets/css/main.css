@@ -2,6 +2,19 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* Utility to hide scrollbar */ 
+@layer utilities {
+      /* Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+}
+
 .z-max {
     z-index: 100000;
 }
@@ -33,13 +46,7 @@
 
 .tp-top-stories {
     height: 100vh;
-   /* position: relative; */
 }
-
-/*.tp-top-stories img {
-    width: auto;
-    height: auto;
-}*/
 
 @media (min-width: 1024px) { /* This is a common desktop breakpoint, similar to Tailwind's lg: */
     .tp-stories-grid {
@@ -50,31 +57,6 @@
     }
 }
 
-/*
-.tp-featured-story {
-    position: relative;
-}
-
-.tp-story-text {
-    position: absolute;
-    bottom: 10px;   
-    left: 10px;     
-}*/
-
-
-/*.tp-featured-story img,
-.tp-story img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.tp-story-text {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    color: white;
-}*/
-
 /* Hiding the scrollbar */
 #storiesGrid::-webkit-scrollbar {
     display: none;
@@ -84,3 +66,5 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
+
+/* cinema */

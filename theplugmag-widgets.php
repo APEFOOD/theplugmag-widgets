@@ -24,8 +24,8 @@ function theplugmag_enqueue_scripts() {
         foreach ($js_files as $js_file) {
             $js_file_url = plugins_url('dist/assets/' . basename($js_file), __FILE__);
             // Generate a unique handle based on file name 
-            $css_handle = 'theplugmag-script-' . sanitize_key(basename($js_file, '.js'));
-            wp_enqueue_script($handle, $js_file_url, [], null, true);
+            //$css_handle = 'theplugmag-script-' . sanitize_key(basename($js_file, '.js'));
+            wp_enqueue_script('theplugmag-scripts', $js_file_url, array(), null, true);
         }
     }
 
@@ -39,7 +39,7 @@ function theplugmag_enqueue_scripts() {
     }
 
     // manual JS enqueue 
-    wp_enqueue_script('theplugmag-scripts', plugin_dir_url(__FILE__) . 'assets/main.js', array(), null, true);
+    //wp_enqueue_script('theplugmag-scripts', plugin_dir_url(__FILE__) . 'assets/main.js', array(), null, true);
 
 }
 

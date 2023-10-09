@@ -8,8 +8,8 @@ export default defineConfig({
     outDir: "dist",
     rollupOptions: {
       input: {
-        //mainJS: path.resolve(__dirname, "assets/main.js"),
-        mainCss: path.resolve(__dirname, "assets/main.css"),
+        mainJS: path.resolve(__dirname, "assets/js/main.js"),
+        mainCss: path.resolve(__dirname, "assets/css/main.css"),
       },
     },
   },

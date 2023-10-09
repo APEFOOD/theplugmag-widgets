@@ -33,9 +33,9 @@
 </div>
 
 <!-- mobile header --> 
-<div class="bg-white py-4 flex justify-between items-center fixed top-0 left-0 right-0 z-50 lg:hidden max-lg:mb-[115px]">
+<div class="bg-white py-2 flex justify-between items-center fixed top-0 left-0 right-0 z-50 lg:hidden">
     <!-- hamburger icon (from our good friends at Elementor) -->
-    <button class="eicon-menu-bar px-3 text-black bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"></button>
+    <button class="eicon-menu-bar p-3 text-black text-xl bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"></button>
 
     <!-- site logo --> 
     <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Standard.png';?>" alt="Logo" class="w-28 md:w-48">
@@ -43,7 +43,7 @@
     <!-- toggles --> 
     <div class="flex">
         <!-- search button --> 
-        <button class="tp-search-toggle eicon-search bg-transparent hover:bg-transparent focus:outline-none focus:ring-0 text-black p-2"></button>
+        <button class="tp-search-toggle eicon-search bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0 text-black text-xl p-3"></button>
     </div>
 </div>
 

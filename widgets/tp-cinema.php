@@ -27,6 +27,6 @@ class TP_Cinema extends \Elementor\Widget_base {
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Video Player (Cinema)</div>';
+        require_once('templates/cinema.php');
     }
 }
