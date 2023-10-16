@@ -27,6 +27,6 @@ class TP_Featured_Videos extends \Elementor\Widget_base {
 
     protected function render()
     {
-        echo '<div id="theplugmag-header-root" class="bg-blue-900 text-white text-center">Featured Videos</div>';
+        require_once('templates/featured-videos.php');
     }
 }

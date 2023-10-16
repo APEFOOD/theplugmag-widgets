@@ -10,7 +10,7 @@
             <div class="absolute inset-0 hover:bg-gray-900 opacity-40 cursor-pointer"></div>
 
             <!-- Container for Play button and title -->
-            <div class="absolute bottom-4 left-4 m-4 flex items-center opacity-80 cursor-pointer">
+            <div class="absolute bottom-4 left-4 md:m-4 flex items-center opacity-80 cursor-pointer">
                 <!-- Play button overlay -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" class="w-20 h-20 group-hover:bg-[#BF0000] bg-black rounded-full">
                     <polygon class="fill-current text-white" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
@@ -19,8 +19,8 @@
 
                 <!-- Video Title -->
                 <div class="flex flex-col z-30">
-                    <span class="ml-2 text-white font-bold text-xl uppercase">Watch</span>
-                    <span class="ml-2 text-white font-bold text-3xl">Video Title</span>
+                    <span class="ml-2 text-white font-bold text-lg md:text-xl uppercase">Watch</span>
+                    <span class="ml-2 text-white font-bold text-xl md:text-3xl">Video Title</span>
                 </div>
             </div>
         </div>
@@ -35,16 +35,15 @@
 
 
 
-    <!-- title and date 
-    <div class="flex justify-between text-white py-4 px-4 md:!px-48">
-        <span class="text-xl font-semibold">Video Title</span>
+    <!-- title and date --> 
+    <div class="flex justify-end text-white py-4 px-4 md:!px-48">
         <span class="text-sm">Video Date</span>
     </div> 
 
      video description 
     <p class="py-4 px-4 md:!px-48 text-white">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut voluptas ipsa ipsum nesciunt voluptatibus! Similique repudiandae provident itaque explicabo possimus quis facilis dolores recusandae voluptate molestias, perspiciatis sed ab exercitationem!
-    </p> --> 
+    </p>
 
 </div>
 
