@@ -44,3 +44,80 @@ function theplugmag_enqueue_scripts() {
 }
 
 add_action('elementor/frontend/after_enqueue_styles', 'theplugmag_enqueue_scripts');
+
+
+// CPT: Shows 
+function plugtv_register_show_cpt() {
+
+    $args = array(
+        'public'        => true, 
+        'label'         => 'Shows', 
+        'has_archive'   => true, 
+        'rewrite'       => array('slug' => 'plug-tv'), 
+        'supports'      => array('title', 'editor', 'thumbnail', 'page-attributes'),
+   );
+
+   register_post_type('plugtv_shows', $args);
+
+}
+
+add_action('init', 'plugtv_register_show_cpt');
+
+// CPT: Episodes 
+function plugtv_register_episode_cpt() {
+
+    $args = array(
+        'public'        => true, 
+        'label'         => 'Episodes', 
+        'has_archive'   => true, 
+        'rewrite'       => array('slug' => 'plug-tv/%show%/'), 
+        'supports'      => array('title', 'editor', 'thumbnail', 'page-attributes'),     
+    );
+
+    register_post_type('plugtv_episodes', $args);
+
+}
+
+add_action('init', 'plugtv_register_episode_cpt');
+
+// Custom fields for episodes
+function plugtv_add_episode_metaboxes() {
+    add_meta_box(
+        'plugtv_episode_meta', 
+        'Episode Details', 
+        'plugtv_episode_meta_callback', 
+        'plugtv_episodes', 
+        'side', 
+        'default'
+    );
+}
+
+function plugtv_episode_meta_callback($post) {
+    // Nonce for verification
+    wp_nonce_field(basename(__FILE__), 'plugtv_nonce');
+    $stored_meta = get_post_meta($post->ID);
+
+    echo '<label for="youtube_id">YouTube ID</label>';
+    echo '<input type="text" name="youtube_id" value="' . esc_attr($stored_meta['youtube_id'][0]) . '">';
+    
+    // Add more fields as needed...
+}
+
+add_action('add_meta_boxes', 'plugtv_add_episode_metaboxes');
+
+// Save episode custom fields
+function plugtv_save_episode_meta($post_id) {
+    // Verify nonce
+    if (!isset($_POST['plugtv_nonce']) || !wp_verify_nonce($_POST['plugtv_nonce'], basename(__FILE__))) {
+        return $post_id;
+    }
+
+    $youtube_id = sanitize_text_field($_POST['youtube_id']);
+    update_post_meta($post_id, 'youtube_id', $youtube_id);
+    
+    // Repeat for additional fields...
+
+    return $post_id;
+}
+
+add_action('save_post', 'plugtv_save_episode_meta');

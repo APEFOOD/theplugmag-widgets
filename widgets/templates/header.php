@@ -1,28 +1,29 @@
 <!-- desktop header --> 
 <div class="hidden lg:block w-full">
     
-    <div class="tp-main-logo relative py-4 bg-gray-100">
+    <div class="tp-main-logo relative py-4 bg-gray-200">
         <div class="tp-site-logo flex justify-center">
             <!-- main site logo --> 
-            <img class="w-1/3" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Minimal.png';?>" alt="Site Logo">
+            <img class="w-1/3" src="<?php echo esc_url($desktop_main_logo); ?>" alt="Site Logo">
         </div>
     </div>
 
     <div class="tp-bottom-header flex bg-white py-2 w-full shadow border-b">
         <!-- secondary logo (initially hidden) -->
         <div class="pl-8 py-2 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
-            <img class="w-32" src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Standard.png';?>" alt="Secondary Logo">
+            <img class="w-32" src="<?php echo esc_url($desktop_secondary_logo); ;?>" alt="Secondary Logo">
         </div>
 
         <!-- navigation menu --> 
         <nav class="tp-main-menu w-3/5 flex justify-center items-center space-x-2">
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Home</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Music</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Style</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Culture</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Latest</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Magazine</a>
-            <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">Plug tv</a>
+            <?php
+                wp_nav_menu(array(
+                    'theme_location' => '', 
+                    'menu' => $selected_menu, 
+                    'container' => false, 
+                    'items_wrap' => '%3$s',
+                )); 
+            ?>
         </nav>
 
         <!-- Dark mode toggle and search button --> 
@@ -38,7 +39,7 @@
     <button class="eicon-menu-bar p-3 text-black text-xl bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"></button>
 
     <!-- site logo --> 
-    <img src="<?php echo plugin_dir_url(__FILE__) . '../../assets/ThePlug-Logo-Standard.png';?>" alt="Logo" class="w-28 md:w-48">
+    <img src="<?php echo esc_url($mobile_logo); ;?>" alt="Logo" class="w-28 md:w-48">
 
     <!-- toggles --> 
     <div class="flex">
@@ -59,13 +60,14 @@
     
     <!-- navigation links -->
     <nav class="flex flex-col space-y-4 p-4 text-center">
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">HOME</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">MUSIC</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">STYLE</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">CULTURE</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">LATEST</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">MAGAZINE</a>
-        <a href="#" class="uppercase text-black hover:text-white hover:bg-red-600 p-2">PLUG TV</a>
+        <?php
+            wp_nav_menu(array(
+                'theme_location' => '', 
+                'menu' => $selected_menu, 
+                'container' => false, 
+                'items_wrap' => '%3$s',
+            )); 
+        ?>
     </nav>
 </div>
 

@@ -67,4 +67,84 @@
     scrollbar-width: none; /* Firefox */
 }
 
-/* cinema */
+/* Initially hide the submenu */ 
+.sub-menu {
+    display: none;
+}
+
+/* Show on hover of the parent menu item */
+.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+#tpMobileMenu .sub-menu {
+    padding-left: 1rem;
+}
+
+/* Remove bullet points from the menu */
+nav.tp-main-menu ul, 
+nav.tp-main-menu li,
+#tpMobileMenu ul, 
+#tpMobileMenu li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav.tp-main-menu a {
+    margin-left: 1rem; 
+    margin-right: 1rem;
+}
+
+#tpMobileMenu a {
+    display: block;
+    margin-bottom: 0.5rem; 
+}
+
+#tpMobileMenu li {
+    padding-left: 1rem; 
+}
+
+#tpMobileMenu .menu-item-has-children > a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#tpMobileMenu .menu-arrow {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+#tpMobileMenu .sub-menu {
+    padding-left: 1rem; /* or adjust as necessary */
+}
+
+/* Sub menu display position */
+.tp-main-menu .menu-item-has-children {
+    position: relative;
+}
+
+.tp-main-menu .menu-item-has-children .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100; /* ensure it's on top of other content */
+    display: none; /* initially hide the submenu */
+    width: 200px; /* or any desired width */
+}
+
+.tp-main-menu .menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+.tp-main-menu .menu-item-has-children .sub-menu {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.tp-main-menu .menu-item-has-children .sub-menu {
+    top: calc(100% - 8px);  /* Adjust the 1px value as needed to close the gap */
+}
