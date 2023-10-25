@@ -2,16 +2,20 @@
 <div class="hidden lg:block w-full">
     
     <div class="tp-main-logo relative py-4 bg-gray-100">
-        <div class="tp-site-logo flex justify-center">
+        <div class="tp-site-logo flex justify-center items-center">
             <!-- main site logo --> 
-            <img class="w-1/3" src="<?php echo esc_url($desktop_main_logo); ?>" alt="Site Logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="flex justify-center items-center no-underline w-1/3">
+                <img class="" src="<?php echo esc_url($desktop_main_logo); ?>" alt="Site Logo">
+            </a>
         </div>
     </div>
 
     <div class="tp-bottom-header flex bg-white py-2 w-full shadow border-b">
         <!-- secondary logo (initially hidden) -->
         <div class="pl-8 py-2 tp-secondary-logo w-1/5 opacity-0 transition-opacity duration-300">
-            <img class="w-32" src="<?php echo esc_url($desktop_secondary_logo); ;?>" alt="Secondary Logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <img class="w-32" src="<?php echo esc_url($desktop_secondary_logo); ;?>" alt="Secondary Logo">
+            </a>
         </div>
 
         <!-- navigation menu --> 
@@ -39,8 +43,9 @@
     <button class="eicon-menu-bar p-3 text-black text-xl bg-transparent border-none hover:bg-transparent focus:outline-none focus:ring-0"></button>
 
     <!-- site logo --> 
-    <img src="<?php echo esc_url($mobile_logo); ;?>" alt="Logo" class="w-28 md:w-48">
-
+    <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img src="<?php echo esc_url($mobile_logo); ;?>" alt="Logo" class="w-28 md:w-48">
+    </a>
     <!-- toggles --> 
     <div class="flex">
         <!-- search button --> 
