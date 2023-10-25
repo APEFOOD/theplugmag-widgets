@@ -124,8 +124,47 @@ class TP_Header extends \Elementor\Widget_base {
                 'selectors' => [
                     '{{WRAPPER}} nav.tp-main-menu a' => 'color: {{VALUE}};',  
                 ],
+                'separator' => 'before',
+            ]
+        ); 
+
+        $this->add_control(
+            'menu_link_hover_color', 
+            [
+                'label'     => __('Menu Link Hover Color', 'tp_header'),
+                'type'      => \Elementor\Controls_Manager::COLOR, 
+                'selectors' => [
+                    '{{WRAPPER}} .tp-main-menu .menu-item:hover > a' => 'color: {{VALUE}};',
+                ],
+                'separator' => 'none',
+            ],
+        );
+
+        $this->add_control(
+            'menu_item_bg_color',
+            [
+                'label'     => __('Menu Item Background Color', 'tp_header'),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'default'   => '',
+                'selectors' => [
+                    '{{WRAPPER}} .tp-main-menu .menu-item' => 'background-color: {{VALUE}};',
+                ],
+                'separator' => 'before',
             ]
         );
+        
+        $this->add_control(
+            'menu_item_hover_bg_color',
+            [
+                'label'     => __('Menu Item Hover Background Color', 'tp_header'),
+                'type'      => \Elementor\Controls_Manager::COLOR,
+                'default'   => '',
+                'selectors' => [
+                    '{{WRAPPER}} .tp-main-menu .menu-item:hover' => 'background-color: {{VALUE}};',
+                ],
+                'separator' => 'none',
+            ]
+        );        
 
         $this->end_controls_section();
 

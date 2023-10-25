@@ -1,7 +1,7 @@
 <!-- desktop header --> 
 <div class="hidden lg:block w-full">
     
-    <div class="tp-main-logo relative py-4 bg-gray-200">
+    <div class="tp-main-logo relative py-4 bg-gray-100">
         <div class="tp-site-logo flex justify-center">
             <!-- main site logo --> 
             <img class="w-1/3" src="<?php echo esc_url($desktop_main_logo); ?>" alt="Site Logo">
