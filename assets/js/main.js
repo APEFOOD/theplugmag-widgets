@@ -129,7 +129,7 @@ jQuery(document).ready(function($) {
     }
 
     // top stories parallax effect (only run the rest of the script for desktop view)
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth >= 1024) {
         
         const topStoriesContainer = document.querySelector('.tp-top-stories');
         const storiesGrid = document.querySelector('#storiesGrid');
