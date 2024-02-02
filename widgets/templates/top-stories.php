@@ -29,10 +29,10 @@
 
                         <!-- Text Container -->
                         <div class="p-4">
-                            <p class="my-1 uppercase text-sm font-semibold"><?php echo esc_html($mixedArray[$i]['tag']); ?></p>
+                            <p class="tp-story-meta my-1 uppercase text-base font-bold"><?php echo esc_html($mixedArray[$i]['tag']); ?></p>
                             <h3 class="tp-story-title font-bold text-xl mb-2"><?php echo esc_html($mixedArray[$i]['title']); ?></h3>
-                            <p class="uppercase font-semibold text-xs">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
-                            <p class="uppercase text-xs"><?php echo esc_html($mixedArray[$i]['date']); ?></p>
+                            <p class="tp-story-meta uppercase font-bold text-base">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
+                            <p class="tp-story-meta uppercase text-sm font-semibold"><?php echo esc_html($mixedArray[$i]['date']); ?></p>
                         </div>
                     </a>
                 </div>
@@ -50,10 +50,10 @@
 
                         <!-- Text Container -->
                         <div class="p-4">
-                            <p class="my-1 uppercase text-sm font-semibold"><?php echo esc_html($mixedArray[$i]['tag']); ?></p>
+                            <p class="tp-story-meta my-1 uppercase text-base font-bold"><?php echo esc_html($mixedArray[$i]['tag']); ?></p>
                             <h3 class="tp-story-title font-bold text-xl mb-2"><?php echo esc_html($mixedArray[$i]['title']); ?></h3>
-                            <p class="uppercase font-semibold text-xs">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
-                            <p class="uppercase text-xs"><?php echo esc_html($mixedArray[$i]['date']); ?></p>
+                            <p class="tp-story-meta uppercase font-bold text-base">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
+                            <p class="tp-story-meta uppercase text-sm font-semibold"><?php echo esc_html($mixedArray[$i]['date']); ?></p>
                         </div>
                     </a>
                 </div> 
