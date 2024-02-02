@@ -3,12 +3,13 @@
     <div class="tp-featured-story w-full lg:w-1/2 mb-6 lg:mb-0 relative h-screen lg:!h-[600px]">
         <a href="<?php echo esc_url($featuredStoryData['link']); ?>" class="block h-full">
             <div class="bg-center bg-cover h-screen lg:h-full absolute top-0 left-0 w-full" style="background-image: url('<?php echo esc_url($featuredStoryData['thumbnail']);?>');"></div>
-            <!-- Overlay div -->
-            <div class="absolute inset-0 bg-gray-800 opacity-30"></div>
+            
+            <!-- Overlay div with gradient effect for bottom half -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950 opacity-80"></div>
         
-            <div class="tp-story-text pb-8 absolute bottom-0 left-1/2 transform -translate-x-1/2 text-center text-white">
+            <div class="tp-story-text pb-8 absolute bottom-4 text-center text-white w-full lg:w-4/5 lg:left-1/2 lg:transform lg:-translate-x-1/2">
                 <p class="tp-story-meta text-lg uppercase"><?php echo esc_html($featuredStoryData['tag']); ?></p>
-                <h2 class="tp-story-title mb-2 text-white text-4xl font-bold"><?php echo esc_html($featuredStoryData['title']); ?></h2>
+                <h2 class="tp-story-title mb-2 text-white text-3xl font-bold"><?php echo esc_html($featuredStoryData['title']); ?></h2>
                 <p class="tp-story-meta text-lg uppercase">BY <?php echo esc_html($featuredStoryData['author']); ?></p>
                 <p class="tp-story-meta text-lg uppercase"><?php echo esc_html($featuredStoryData['date']); ?></p>
             </div>
