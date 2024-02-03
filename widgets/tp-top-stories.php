@@ -111,7 +111,7 @@ class TP_Top_Stories extends \Elementor\Widget_base
         
         $placeholder = [
             'title'     => 'Placeholder Title', 
-            'tag'       => 'Tag', 
+            'category'  => 'Category', 
             'author'    => 'Author', 
             'date'      => 'Date', 
             'link'      => '#',
@@ -136,7 +136,7 @@ class TP_Top_Stories extends \Elementor\Widget_base
                 
                 $mixedArray[$index] = [
                     'title'     => get_the_title($postID), 
-                    'tag'       => strip_tags(get_the_tag_list('', ', ', '', $postID)),
+                    'category'  => !empty(get_the_category($postID)[0]) ? esc_html(get_the_category($postID)[0]->name) : '',
                     'author'    => get_the_author_meta('display_name', get_post_field('post_author', $postID)),
                     'date'      => get_the_date('', $postID), 
                     'link'      => get_permalink($postID), 
@@ -155,7 +155,7 @@ class TP_Top_Stories extends \Elementor\Widget_base
             
             $featuredStoryData = [
                 'title'     => get_the_title($featuredStoryID), 
-                'tag'       => strip_tags(get_the_tag_list('', ', ', '', $featuredStoryID)),
+                'category'  => !empty(get_the_category($postID)[0]) ? esc_html(get_the_category($featuredStoryID)[0]->name) : '',
                 'author'    => get_the_author_meta('display_name', get_post_field('post_author', $featuredStoryID)),
                 'date'      => get_the_date('', $featuredStoryID), 
                 'link'      => get_permalink($featuredStoryID), 
