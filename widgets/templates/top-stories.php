@@ -28,7 +28,7 @@
                         <img src="<?php echo esc_url($mixedArray[$i]['thumbnail']); ?>" class="w-full h-auto md:object-cover" alt="Story">
 
                         <!-- Text Container -->
-                        <div class="p-4">
+                        <div class="pt-2 pb-4">
                             <p class="tp-story-meta my-1 uppercase text-base font-bold"><?php echo esc_html($mixedArray[$i]['category']); ?></p>
                             <h3 class="tp-story-title font-bold text-xl mb-2"><?php echo esc_html($mixedArray[$i]['title']); ?></h3>
                             <p class="tp-story-meta uppercase font-bold text-base">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
@@ -49,7 +49,7 @@
                         <img src="<?php echo esc_url($mixedArray[$i]['thumbnail']); ?>" class="w-full h-auto md:object-cover" alt="Story">
 
                         <!-- Text Container -->
-                        <div class="p-4">
+                        <div class="pt-2 pb-4">
                             <p class="tp-story-meta my-1 uppercase text-base font-bold"><?php echo esc_html($mixedArray[$i]['category']); ?></p>
                             <h3 class="tp-story-title font-bold text-xl mb-2"><?php echo esc_html($mixedArray[$i]['title']); ?></h3>
                             <p class="tp-story-meta uppercase font-bold text-base">BY <?php echo esc_html($mixedArray[$i]['author']); ?></p>
