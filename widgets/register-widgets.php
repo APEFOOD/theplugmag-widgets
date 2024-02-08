@@ -21,7 +21,6 @@ function register_custom_widgets() {
     require_once('tp-cinema.php');
     require_once('tp-magazine-listing.php');
     require_once('tp-latest-posts-listing.php');
-    require_once('tp-shows.php');
     require_once('tp-top-stories.php');
 
     \Elementor\Plugin::instance()->widgets_manager->register(new TP_Cinema());
@@ -31,7 +30,6 @@ function register_custom_widgets() {
     \Elementor\Plugin::instance()->widgets_manager->register(new TP_Home_Loop());
     \Elementor\Plugin::instance()->widgets_manager->register(new TP_Magazine_Listing());
     \Elementor\Plugin::instance()->widgets_manager->register(new TP_Latest_Posts_Listing());
-    \Elementor\Plugin::instance()->widgets_manager->register(new TP_Shows());
     \Elementor\Plugin::instance()->widgets_manager->register(new TP_Top_Stories());
 }
 

@@ -142,7 +142,7 @@ function plugtv_episode_meta_callback($post) {
     wp_nonce_field(basename(__FILE__), 'plugtv_nonce');
     $stored_meta = get_post_meta($post->ID);
 
-    echo '<label for="youtube_id">YouTube ID</label>';
+    echo '<label for="youtube_id">YouTube URL</label>';
     echo '<input type="text" name="youtube_id" value="' . esc_attr($stored_meta['youtube_id'][0]) . '">';
     
     // Add the custom field for the associated show's name
@@ -188,4 +188,28 @@ function plugtv_save_episode_meta($post_id) {
 }
 
 add_action('save_post', 'plugtv_save_episode_meta');
+
+
+// Extract the video ID from a YouTube video url
+function plugtv_get_youtube_video_id($youtube_url) {
+    
+    // RegEx pattern matching magic thanks to ChatGPT 
+    $patterns = array(
+        '/(?:https?:\/\/)?(?:www\.)?youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)([a-zA-Z0-9_-]{11})/',
+        '/youtu\.be\/([a-zA-Z0-9_-]{11})/'
+    );
+    
+    foreach ($patterns as $pattern) {
+        if (preg_match($pattern, $youtube_url, $matches)) {
+            return $matches[1];
+        }
+    }
+    
+    if (isset($matches[1])) {
+        return $matches[1];
+    } else {
+        return false; 
+    }
+    
+} 
 

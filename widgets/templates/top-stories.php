@@ -1,7 +1,7 @@
 <div class="tp-top-stories flex flex-col lg:flex-row lg:px-2 h-auto">
     <!-- featured story --> 
     <div class="tp-featured-story w-full lg:w-1/2 mb-6 lg:mb-0 relative h-screen lg:!h-[650px]">
-        <a href="<?php echo esc_url($featuredStoryData['link']); ?>" class="block h-full">
+        <a href="<?php echo esc_url($featuredStoryData['link']); ?>" title="<?php echo esc_html($featuredStoryData['title']); ?>">
             <div class="bg-center bg-cover h-screen lg:h-full absolute top-0 left-0 w-full" style="background-image: url('<?php echo esc_url($featuredStoryData['thumbnail']);?>');"></div>
             
             <!-- Overlay div with gradient effect for bottom half -->
@@ -23,7 +23,7 @@
         <div class="w-full md:flex-1">
             <?php for ($i = 0; $i < 2; $i++) : ?>
                 <div class="tp-story mx-1 flex flex-col md:block md:my-0 max-md:border-b max-md:border-black max-md:py-2">
-                    <a href="<?php echo esc_url($mixedArray[$i]['link']); ?>" class="block h-full">
+                    <a href="<?php echo esc_url($mixedArray[$i]['link']); ?>" title="<?php echo esc_html($mixedArray[$i]['title']); ?>">
                         <!-- Thumbnail -->
                         <img src="<?php echo esc_url($mixedArray[$i]['thumbnail']); ?>" class="w-full h-auto md:object-cover" alt="Story">
 
@@ -44,7 +44,7 @@
         <div class="w-full md:flex-1">
             <?php for ($i = 2; $i < 4; $i++) : ?>
                <div class="tp-story mx-1 flex flex-col md:block md:my-0 max-md:border-b max-md:border-black max-md:py-2">
-                    <a href="<?php echo esc_url($mixedArray[$i]['link']); ?>" class="block h-full">
+                    <a href="<?php echo esc_url($mixedArray[$i]['link']); ?>" title="<?php echo esc_html($mixedArray[$i]['title']); ?>">
                         <!-- Thumbnail -->
                         <img src="<?php echo esc_url($mixedArray[$i]['thumbnail']); ?>" class="w-full h-auto md:object-cover" alt="Story">
 
